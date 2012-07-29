@@ -20,7 +20,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.11.0'
-  gem 'mocha', '~> 0.12.1'
+  gem 'mocha', '~> 0.12.1', :require => nil
   gem 'autotest-rails', '~> 4.1.2'
 end
 

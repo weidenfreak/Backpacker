@@ -8,4 +8,15 @@ describe WelcomeController do
         should route_to(:controller => "welcome", :action => "index")
     end
   end
+
+  context "GET :index" do
+    before do
+      get :index
+    end
+
+    it "renders " do
+      response.should be_successful
+      response.should render_template(:index)
+    end
+  end
 end

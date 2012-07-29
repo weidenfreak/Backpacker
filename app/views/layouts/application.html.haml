@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title Find Backpacker to travel with around you!
+    %meta(charset="utf-8")
+    %meta{:name => "author", :content => "Meike Wiemann"}
+    = csrf_meta_tag
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+
+  %body
+    = yield

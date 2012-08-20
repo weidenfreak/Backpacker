@@ -13,12 +13,7 @@
     .container
       .row
         .span9
-          .notice
-            = notice
-          .alert
-            = alert
-          %ul.hmenu
-            = render 'devise/menu/login_items'
+          = render 'layouts/messages'
           = yield
         .span3
           %h2 About this

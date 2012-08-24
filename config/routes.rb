@@ -4,6 +4,7 @@ Backpacker::Application.routes.draw do
   resources :users, :only => [:show]
 
   match '/imprint', :to => 'welcome#imprint'
+  match '/about', :to => 'welcome#about'
 
   root :to => 'welcome#index'
 end

@@ -5,4 +5,7 @@ class WelcomeController < ApplicationController
 
   def imprint
   end
+
+  def about
+  end
 end

@@ -12,5 +12,7 @@
       .nav-collapse
         / .nav, .navbar-search, .navbar-form, etc
         %ul.nav
-          = render 'devise/menu/login_items'
+          - if user_signed_in?
+            %li= link_to 'Profile', current_user
           = render 'devise/menu/registration_items'
+          = render 'devise/menu/login_items'

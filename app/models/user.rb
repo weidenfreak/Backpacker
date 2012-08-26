@@ -6,12 +6,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :location
-  accepts_nested_attributes_for :location
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :location_attributes
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :latitude, :longitude, :gmaps
 
-  acts_as_gmappable :position => :location, :process_geocoding => false
+  acts_as_gmappable :process_geocoding => false
 
   def gmaps4rails_address
     "Paris, France"

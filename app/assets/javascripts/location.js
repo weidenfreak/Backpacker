@@ -7,7 +7,7 @@ jQuery.fn.location = function() {
           $.ajax({
             type: "PUT",
             url: window.location.pathname,
-            data: { user: {location_attributes: {longitude: result.longitude, latitude: result.latitude} }}
+            data: { user: {longitude: result.longitude, latitude: result.latitude} }
           });
         };
         failure = function(message) {

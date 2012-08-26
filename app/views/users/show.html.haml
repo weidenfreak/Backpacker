@@ -1,16 +1,17 @@
 %h3= @user.name
 %h6= @user.tagline
-%dl.dl-horizontal
-  %dt Mail
-  %dd= @user.email
-  %dt Current Location
-  %dd
-    = "(#{@user.latitude}, #{@user.longitude})"
-    = link_to "Update my location","", :id => 'update-location'
-  %dt Description
-  %dd= @user.description
+.container
+  .row.user-page
+    .span2
+      = image_tag avatar_url(@user, 200)
+    .span6
+      %dl.dl-horizontal
+        %dt Contact:
+        %dd= @user.email
+      .lead.small
+        %p= @user.description
 
-= link_to('Edit Profile', edit_user_registration_path)
+= link_to "Update my location","", :id => 'update-location'
 %br
 %br
 %h3 Everyone else:

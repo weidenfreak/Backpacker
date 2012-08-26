@@ -1,7 +1,7 @@
 %h2 Sign in
 = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'well' }) do |f|
   = f.label :email
-  = f.email_field :email
+  = f.email_field :email, :autofocus => "autofocus"
   = f.label :password
   = f.password_field :password
   - if devise_mapping.rememberable?

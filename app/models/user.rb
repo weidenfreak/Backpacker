@@ -15,7 +15,4 @@ class User < ActiveRecord::Base
     "Paris, France"
   end
 
-  def gmaps4rails_title
-    self.name
-  end
 end

@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
+  include UserStatus
+  STATUS = [UserStatus::STUCK, UserStatus::SOON_FREE, UserStatus::FREE]
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

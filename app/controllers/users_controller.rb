@@ -4,7 +4,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-    @json = User.all.to_gmaps4rails
+    @json = User.all.to_gmaps4rails do |user, marker|
+      marker.infowindow render_to_string(:partial => "/users/partials/infowindow", :locals => { :user => user })
+      #marker.picture({
+        #:picture => avatar_url(user),
+        #:width   => 32,
+        #:height  => 32
+      #})
+      marker.title user.name
+      marker.json({ :id => user.id })
+    end
   end
 
   def update
@@ -14,12 +23,6 @@ class UsersController < ApplicationController
     else
       flash[:alert] = "Saving changes failed!"
     end
-  end
-
-  def gmaps4rails_infowindow
-    "<strong>#{self.name}</strong>
-    <p>#{self.tagline}</p>
-    <p>Current User: #{current_user}</p>"
   end
 
 end

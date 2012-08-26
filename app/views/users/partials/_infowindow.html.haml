@@ -1,0 +1,8 @@
+.row
+  .span1
+    = link_to image_tag(avatar_url(user, 80)), user_url(:id => user.id)
+  .span2
+    %strong
+      = link_to user.name, user_url(:id => user.id)
+    .lead.small
+      = user.tagline

@@ -11,6 +11,11 @@
   = f.label :current_password
   = f.password_field :current_password
   %span.help-block (we need your current password to confirm your changes)
+  = f.label :tagline
+  = f.text_field :tagline
+  %span.help-block (this text is shown for your pin on the map)
+  = f.label :description
+  = f.text_field :description
   %div= f.submit "Update", :class => 'btn'
 
 %h3 Cancel my account

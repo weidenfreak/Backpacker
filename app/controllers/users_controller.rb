@@ -16,4 +16,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def gmaps4rails_infowindow
+    "<strong>#{self.name}</strong>
+    <p>#{self.tagline}</p>
+    <p>Current User: #{current_user}</p>"
+  end
+
 end

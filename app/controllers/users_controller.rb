@@ -6,11 +6,11 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @json = User.all.to_gmaps4rails do |user, marker|
       marker.infowindow render_to_string(:partial => "/users/partials/infowindow", :locals => { :user => user })
-      #marker.picture({
-        #:picture => avatar_url(user),
-        #:width   => 32,
-        #:height  => 32
-      #})
+      marker.picture({
+        :picture => "/assets/maps/#{user.status}-dot.png",
+        :width   => 32,
+        :height  => 32
+      })
       marker.title user.name
       marker.json({ :id => user.id })
     end

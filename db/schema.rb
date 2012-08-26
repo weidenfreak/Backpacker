@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120826113604) do
+ActiveRecord::Schema.define(:version => 20120826172513) do
 
   create_table "locations", :force => true do |t|
     t.float    "latitude"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20120826113604) do
     t.boolean  "gmaps"
     t.string   "tagline"
     t.text     "description"
+    t.string   "status"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

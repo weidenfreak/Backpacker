@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
     @json = User.all.to_gmaps4rails
-    p @json
   end
 
   def update

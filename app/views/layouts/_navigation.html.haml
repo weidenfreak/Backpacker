@@ -14,5 +14,6 @@
         %ul.nav
           - if user_signed_in?
             %li= link_to 'Profile', current_user
-          = render 'devise/menu/registration_items'
-          = render 'devise/menu/login_items'
+            %li= link_to('Edit Profile', edit_user_registration_path)
+        .nav.pull-right
+          = render 'devise/menu/items'

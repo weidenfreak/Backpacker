@@ -1,19 +1,19 @@
 %span.user
-  %h3
-    %span{:class => "status status-#{@user.status}"}
-    = @user.name
-  %h6= @user.tagline
   .container
-    .row.user-page
-      .span2
-        = image_tag avatar_url(@user, 150)
-      .span6
+    .row
+      .span3
+        %h3
+          %span{:class => "status status-#{@user.status}"}
+          = @user.name
+        %h6= @user.tagline
+        = image_tag avatar_url(@user, 150), :class => 'avatar'
         .lead.small
           %p= @user.description
           - if current_user != @user
             = mail_to @user.email, "Write a message", :encode => :hex, :class => "btn"
 
-  = link_to "Update my location","", :id => 'update-location', :class => "btn"
-  %h3 Where's everyone else?
-  = gmaps4rails(@json)
+        = link_to "Update my location","", :id => 'update-location', :class => "btn"
+      .span6
+        %h3 Where's everyone else?
+        = gmaps4rails(@json)
 

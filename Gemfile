@@ -6,6 +6,7 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem "devise"
+gem "gmaps4rails", :path => "~/mate/Google-Maps-for-Rails"
 
 # Gems used only for assets and not required
 # in production environments by default.

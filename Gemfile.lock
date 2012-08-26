@@ -1,3 +1,8 @@
+PATH
+  remote: ~/mate/Google-Maps-for-Rails
+  specs:
+    gmaps4rails (1.5.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -177,6 +182,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails
+  gmaps4rails!
   haml (~> 3.1.6)
   jquery-rails
   mocha (~> 0.12.1)

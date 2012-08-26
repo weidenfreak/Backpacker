@@ -5,3 +5,6 @@
   %p= @user.location.latitude
   %p= @user.location.longitude
 = link_to "Update location","", :id => 'update-location'
+= @json
+= gmaps4rails(@json)
+

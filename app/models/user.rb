@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :location_attributes
 
+  acts_as_gmappable :position => :location, :process_geocoding => false
+
+  def gmaps4rails_address
+    "Paris, France"
+  end
 end

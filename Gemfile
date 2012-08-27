@@ -26,10 +26,6 @@ group :test, :development do
   gem 'autotest-rails', '~> 4.1.2'
 end
 
-group :deployment do
-  gem 'uberspacify'
-end
-
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

@@ -9,10 +9,11 @@
         = image_tag avatar_url(@user, 150), :class => 'avatar'
         .lead.small
           %p= @user.description
-          - if current_user != @user
+          - if current_user == @user
+            = link_to "Update my location","", :id => 'update-location', :class => "btn"
+          - else
             = mail_to @user.email, "Write a message", :encode => :hex, :class => "btn"
 
-        = link_to "Update my location","", :id => 'update-location', :class => "btn"
       .span6
         %h3 Where's everyone else?
         = gmaps4rails(@json)

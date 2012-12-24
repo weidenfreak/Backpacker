@@ -27,6 +27,10 @@ group :test, :development do
   gem 'autotest-rails', '~> 4.1.2'
 end
 
+gem 'thin'
+gem 'vlad', :require => false
+gem 'vlad-extras', :require => false
+gem 'vlad-git', :require => false
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

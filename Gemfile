@@ -7,6 +7,7 @@ gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem "devise"
 gem "gmaps4rails"
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,7 +27,6 @@ group :test, :development do
   gem 'autotest-rails', '~> 4.1.2'
 end
 
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

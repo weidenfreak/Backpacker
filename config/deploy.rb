@@ -16,7 +16,7 @@ set :application, 'backpacker'
 
 # the repo where your code is hosted
 set :scm, :git
-set :repository, '.'
+set :repository, 'https://github.com/weidenfreak/Backpacker.git'
 
 # optional stuff from here
 

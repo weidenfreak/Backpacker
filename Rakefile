@@ -6,11 +6,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 Backpacker::Application.load_tasks
-
-begin
-  require 'vlad'
-  require 'vlad-extras'
-  Vlad.load :scm => :git # takes an options hash depending on your setup
-rescue LoadError
-  puts 'Could not load Vlad'
-end

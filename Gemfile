@@ -29,20 +29,12 @@ end
 
 gem 'capistrano'
 gem 'uberspacify'
-#gem 'thin'
-#gem 'vlad', :require => false
-##gem 'vlad-extras', :require => false
-#gem "vlad-extras", :git => "git://github.com/dennisreimann/vlad-extras.git", :require => false
-#gem 'vlad-git', :require => false
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'

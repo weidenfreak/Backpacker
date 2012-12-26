@@ -1,29 +1,36 @@
-# -*- encoding : utf-8 -*-
-# Custom variables used in the following config
-set :application, "backpacker"
-set :username, "surface"
+# include uberspacify base recipes
+require 'uberspacify/base'
 
-# Required variables
-set :domain, "surface@serpens.uberspace.de"
-set :deploy_to, "/var/www/virtual/#{username}/rails/#{application}"
-set :repository, "git@github.com:weidenfreak/Backpacker.git"
+# comment this if you don't use MySQL
+#require 'uberspacify/mysql'
 
-# Optional variables
-set :user, "deploy" # if different from your current login
-set :bundle_cmd," ~/.gem/ruby/1.9.1/bin/bundle"
-set :rake_cmd, "#{bundle_cmd} exec rake"
-set :revision, "origin/master"
+# the Uberspace server you are on
+server 'serpens.uberspace.de', :web, :app, :db, :primary => true
 
-# vlad-extras config
-set :copy_shared, {
-  'config/database.yml'     => 'config/database.yml' }
-set :symlinks, {
-  'assets'              => 'public/assets',
-  'config/database.yml' => 'config/database.yml' }
+# your Uberspace username
+set :user, 'surface'
 
-# Bundler ships with vlad integration you'll have to require
-# in order to use the vlad:bundle tasks
-require 'bundler/vlad'
+# a name for your app, [a-z0-9] should be safe, will be used for your gemset,
+# databases, directories, etc.
+set :application, 'backpacker'
 
-# Require custom vlad tasks or recipes from vlad-extras
-require 'vlad/maintenance'
+# the repo where your code is hosted
+set :scm, :git
+set :repository, '.'
+
+# optional stuff from here
+
+# By default, your app will be available in the root of your Uberspace. If you
+# have your own domain set up, you can configure it here
+# set :domain, 'www.dummyapp.com'
+
+# By default, uberspacify will generate a random port number for Passenger to
+# listen on. This is fine, since only Apache will use it. Your app will always
+# be available on port 80 and 443 from the outside. However, if you'd like to
+# set this yourself, go ahead.
+# set :passenger_port, 55555
+
+# By default, Ruby Enterprise Edition 1.8.7 is used for Uberspace. If you
+# prefer Ruby 1.9 or any other version, please refer to the RVM documentation
+# at https://rvm.io/integration/capistrano/ and set this variable.
+set :rvm_ruby_string, '1.9.3@rails-backpacker'

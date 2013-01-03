@@ -26,6 +26,7 @@ group :test, :development do
   gem 'mocha', '~> 0.12.1', :require => nil
   gem 'factory_girl_rails'
   gem 'autotest-rails', '~> 4.1.2'
+  gem 'debugger'
 end
 
 gem 'capistrano'
@@ -37,5 +38,3 @@ gem 'uberspacify'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'

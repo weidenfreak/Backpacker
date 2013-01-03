@@ -186,8 +186,8 @@ DEPENDENCIES
   bootstrap-sass (~> 2.2.2.0)
   capistrano
   coffee-rails (~> 3.2.1)
-  devise
   debugger
+  devise (~> 2.1.2)
   factory_girl_rails
   gmaps4rails
   haml (~> 3.1.6)

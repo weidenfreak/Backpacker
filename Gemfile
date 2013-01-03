@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem 'sass', '~> 3.2.4'
-gem "devise"
+gem "devise", '~> 2.1.2'
 gem "gmaps4rails"
 gem 'jquery-rails'
 

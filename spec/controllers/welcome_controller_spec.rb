@@ -7,6 +7,16 @@ describe WelcomeController do
       { :get => "/" }.
         should route_to(:controller => "welcome", :action => "index")
     end
+
+    it "should route to imprint" do
+      { :get => "/imprint" }.
+        should route_to(:controller => "welcome", :action => "imprint")
+    end
+
+    it "should route to about" do
+      { :get => "/about" }.
+        should route_to(:controller => "welcome", :action => "about")
+    end
   end
 
   context "GET :index" do

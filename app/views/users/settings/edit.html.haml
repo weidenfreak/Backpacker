@@ -1,0 +1,12 @@
+%h2 Change your password
+= form_for(@user, :url => user_settings_path, :html => { :method => :put, :class => 'well' }) do |f|
+  = f.error_messages
+  = f.label :current_password
+  = f.password_field :current_password
+  = f.label :password
+  = f.password_field :password, :autocomplete => "off"
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation
+  %div= f.submit "Update", :class => 'btn'
+
+= link_to "Back", :back

@@ -3,14 +3,6 @@
   = devise_error_messages!
   = f.label :email
   = f.email_field :email
-  = f.label :password
-  = f.password_field :password, :autocomplete => "off"
-  %span.help-inline (leave blank if you don't want to change it)
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-  = f.label :current_password
-  = f.password_field :current_password
-  %span.help-inline (we need your current password to confirm your changes)
   = f.label :tagline
   = f.text_field :tagline
   %span.help-inline (this text is shown for your pin on the map)

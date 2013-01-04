@@ -13,7 +13,7 @@
         / .nav, .navbar-search, .navbar-form, etc
         %ul.nav
           - if user_signed_in?
-            %li= link_to 'My Profile', current_user
-            %li= link_to('Edit Profile', edit_user_registration_path)
+            %li= link_to 'Profile', edit_user_registration_path
+            %li= link_to 'Password', edit_user_settings_path
         .nav.pull-right
           = render 'devise/menu/items'

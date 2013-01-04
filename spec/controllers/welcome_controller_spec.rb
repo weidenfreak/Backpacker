@@ -14,9 +14,13 @@ describe WelcomeController do
       get :index
     end
 
-    it "renders " do
+    it "renders index template" do
       response.should be_successful
       response.should render_template(:index)
+    end
+
+    it "assigns json" do
+      assigns[:json].should_not be_empty
     end
   end
 end

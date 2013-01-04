@@ -2,6 +2,7 @@
   %h1 Find a travel mate
   %p
     Searching for people to travel with? See who's around you and wants to travel as well!
+    = gmaps4rails(@json)
   %p Sign up or Login to see the full user profile of others and create your own profile.
 
   = link_to 'Sign up', new_user_registration_path, :class => 'btn btn-primary btn-large'

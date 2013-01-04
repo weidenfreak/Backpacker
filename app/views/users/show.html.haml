@@ -14,7 +14,3 @@
           - else
             = mail_to @user.email, "Write a message", :encode => :hex, :class => "btn"
 
-      .span6
-        %h3 Where's everyone else?
-        = gmaps4rails(@json)
-

@@ -12,15 +12,17 @@
     = csrf_meta_tags
     = yield(:head)
   %body
-    = render 'layouts/navigation'
-    #main{:role => "main"}
-      .container
-        .content
-          .row
-            .span12
-              = render 'layouts/messages'
-              = yield
-    %footer.navbar-inner
+    #wrap
+      = render 'layouts/navigation'
+      #main{:role => "main"}
+        .container
+          .content
+            .row
+              .span12
+                = render 'layouts/messages'
+                = yield
+        #push
+    %footer
       .container
         %p
           = link_to 'Imprint', imprint_url

@@ -2,7 +2,7 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '3.2.3'
+gem 'rails'
 
 gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
@@ -24,8 +24,8 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.11.0'
-  gem 'mocha', '~> 0.12.1', :require => nil
+  gem 'rspec-rails'
+  gem 'mocha', :require => nil
   gem 'factory_girl_rails', '~> 4.0'
   gem 'debugger'
 end

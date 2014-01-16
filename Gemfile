@@ -7,7 +7,7 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem 'sass', '~> 3.2.4'
-gem "devise", '~> 2.1.2'
+gem "devise"
 gem "gmaps4rails"
 gem 'jquery-rails'
 gem 'dynamic_form', '~> 1.1.4'

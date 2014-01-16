@@ -13,6 +13,4 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me,
     :latitude, :longitude, :gmaps, :tagline, :description, :status
 
-  acts_as_gmappable :process_geocoding => false
-
 end

@@ -1,8 +1,21 @@
+= javascript_include_tag  "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry"
+= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+
 .hero-unit
   %h1 Find a travel mate
   %p
     Searching for people to travel with? See who's around you and wants to travel as well!
-    = gmaps4rails(@json)
+    .map_container
+      #map
+    - content_for :scripts do
+      :javascript
+        handler = Gmaps.build('Google');
+        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+          markers = handler.addMarkers(#{raw @json });
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+    = yield :scripts
   %p Sign up or Login to see the full user profile of others and create your own profile.
 
   = link_to 'Sign up', new_user_registration_path, :class => 'btn btn-primary btn-large'

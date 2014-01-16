@@ -9,11 +9,7 @@
   width: 800px;
 }
 
-.gmaps4rails_map {
+#map {
   width: 800px;
   height: 400px;
-}
-
-.map_container img {
-  max-width: none;
 }

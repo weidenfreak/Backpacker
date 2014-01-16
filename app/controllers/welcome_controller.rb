@@ -1,16 +1,19 @@
 # -*- encoding : utf-8 -*-
 class WelcomeController < ApplicationController
   def index
-    @json = User.all.to_gmaps4rails do |user, marker|
+    @users = User.all
+    @json = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
       marker.infowindow render_to_string(:partial => "/users/partials/infowindow", :locals => { :user => user })
       marker.picture({
-        :picture => "/assets/maps/#{user.status}-dot.png",
+        :url => "/assets/maps/#{user.status}-dot.png",
         :width   => 32,
         :height  => 32
       })
       marker.title user.name
       marker.json({ :id => user.id })
-    end
+    end.to_json
   end
 
   def imprint
@@ -19,3 +22,4 @@ class WelcomeController < ApplicationController
   def about
   end
 end
+

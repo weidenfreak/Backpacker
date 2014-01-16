@@ -72,7 +72,7 @@ GEM
       factory_girl (~> 4.0.0)
       railties (>= 3.0.0)
     fastthread (1.0.7)
-    gmaps4rails (1.5.5)
+    gmaps4rails (2.1.1)
     haml (3.1.7)
     highline (1.6.15)
     hike (1.2.1)

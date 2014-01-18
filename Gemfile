@@ -2,21 +2,22 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails'
+gem 'rails', '~> 4.0.2'
 
 gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem 'sass', '~> 3.2.4'
-gem "devise"
-gem "gmaps4rails"
-gem 'jquery-rails'
+gem "devise", '~> 3.2.2'
+gem "gmaps4rails", '~> 2.1.1'
+gem 'jquery-rails', '~> 3.0.4'
 gem 'dynamic_form', '~> 1.1.4'
+gem 'protected_attributes'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails', '~> 4.0.1'
+  gem 'coffee-rails', '~> 4.0.1'
   gem 'bootstrap-sass', '~> 2.2.2.0'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
@@ -24,13 +25,13 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
-  gem 'mocha', :require => nil
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'mocha', '~> 1.0.0', :require => nil
   gem 'factory_girl_rails', '~> 4.0'
   gem 'debugger'
 end
 
-gem 'uberspacify'
+gem 'uberspacify', '~> 0.9.5'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -6,8 +6,8 @@ Backpacker::Application.routes.draw do
     resource :settings, :only => [:edit, :update]
   end
 
-  match '/imprint', :to => 'welcome#imprint'
-  match '/about', :to => 'welcome#about'
+  get '/imprint', :to => 'welcome#imprint'
+  get '/about', :to => 'welcome#about'
 
   root :to => 'welcome#index'
 end

@@ -1,3 +1,4 @@
+# # -*- encoding : utf-8 -*-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -125,7 +126,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-  
+
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
 
@@ -229,4 +230,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+  config.secret_key = '741f6a8033ad4b44ee7416bdcf11420cf1c6876e62bcbfd4e7a078b49ba884b40dbaf46ae619716682a0bd369e719056252bf14898c0958ea969803852fe1ebc'
 end

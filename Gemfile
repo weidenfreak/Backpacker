@@ -31,8 +31,6 @@ group :test, :development do
   gem 'debugger'
 end
 
-gem 'uberspacify', '~> 0.9.5'
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

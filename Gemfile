@@ -4,7 +4,6 @@ ruby '1.9.3'
 
 gem 'rails', '~> 4.0.2'
 
-gem 'sqlite3'
 gem 'haml', '~> 3.1.6'
 gem 'sass', '~> 3.2.4'
 gem "devise", '~> 3.2.2'
@@ -29,6 +28,7 @@ group :test, :development do
   gem 'mocha', '~> 1.0.0', :require => nil
   gem 'factory_girl_rails', '~> 4.0'
   gem 'debugger'
+  gem 'sqlite3'
 end
 
 # To use ActiveModel has_secure_password
@@ -36,4 +36,7 @@ end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end

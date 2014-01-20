@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+*/
+
+html, body {
+  height: 100%; }
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; }
+
+#push {
+  height: 60px; }
+
+footer {
+  height: 60px;
+  background-color: whitesmoke; }
+  footer a {
+    color: #999999;
+    padding-right: 15px;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: none;
+      color: black; }
+
+@media (max-width: 767px) {
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px; } }
+.user img.avatar {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+.user .lead.small {
+  font-size: 15px;
+  line-height: 21px; }
+.user .map_container {
+  margin-bottom: 20px;
+  margin-top: 10px; }
+
+.status-free {
+  background-color: #00e64d; }
+
+.status-soon-free {
+  background-color: #fdf569; }
+
+.status-stuck {
+  background-color: #fd7567; }
+
+.status {
+  border-radius: 18px;
+  padding: 0px 9px 0px 13px;
+  margin-right: 9px; }
+html, body {
+  height: 100%; }
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; }
+
+#push {
+  height: 60px; }
+
+footer {
+  height: 60px;
+  background-color: whitesmoke; }
+  footer a {
+    color: #999999;
+    padding-right: 15px;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: none;
+      color: black; }
+
+@media (max-width: 767px) {
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px; } }
+.user img.avatar {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+.user .lead.small {
+  font-size: 15px;
+  line-height: 21px; }
+.user .map_container {
+  margin-bottom: 20px;
+  margin-top: 10px; }
+
+.status-free {
+  background-color: #00e64d; }
+
+.status-soon-free {
+  background-color: #fdf569; }
+
+.status-stuck {
+  background-color: #fd7567; }
+
+.status {
+  border-radius: 18px;
+  padding: 0px 9px 0px 13px;
+  margin-right: 9px; }
+/*@import "bootstrap";*/
+body {
+  padding-top: 60px; }
+
+#map img {
+  max-width: none; }
+
+#map label {
+  width: auto;
+  display: inline; }
+
+/*@import "bootstrap-responsive";*/
+.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 800px;
+}
+
+#map {
+  width: 800px;
+  height: 400px;
+}

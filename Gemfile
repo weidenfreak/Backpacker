@@ -11,6 +11,7 @@ gem "gmaps4rails", '~> 2.1.1'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'dynamic_form', '~> 1.1.4'
 gem 'protected_attributes'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,12 +32,12 @@ group :test, :development do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+#
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
-end

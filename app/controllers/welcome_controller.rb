@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
       marker.lng user.longitude
       marker.infowindow render_to_string(:partial => "/users/partials/infowindow", :locals => { :user => user })
       marker.picture({
-        :url => "/assets/maps/#{user.status}-dot.png",
+        :url => view_context.asset_path("maps/#{user.status}-dot.png"),
         :width   => 32,
         :height  => 32
       })

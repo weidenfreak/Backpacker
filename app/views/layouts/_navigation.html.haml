@@ -1,19 +1,18 @@
-.navbar.navbar-fixed-top
-  .navbar-inner
-    .container
-      / .btn-navbar is used as the toggle for collapsed navbar content
-      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+.navbar.navbar-fixed-top.navbar-default{:role => "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".nav-collapse", "data-toggle" => "collapse", "type" => "button"}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      / Be sure to leave the brand out there if you want it shown
-      %a.brand{:href => root_url} Backpacker
-      / Everything you want hidden at 940px or less, place within here
-      .nav-collapse
-        / .nav, .navbar-search, .navbar-form, etc
-        %ul.nav
-          - if user_signed_in?
-            %li= link_to 'Profile', edit_user_registration_path
-            %li= link_to 'Password', edit_user_settings_path
-        .nav.pull-right
-          = render 'devise/menu/items'
+      %a.navbar-brand{:href => root_url} Backpacker
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li= link_to 'Home', root_url
+        %li= link_to 'Imprint', imprint_url
+        %li= link_to 'About', about_url
+        - if user_signed_in?
+          %li= link_to 'Profile', edit_user_registration_path
+          %li= link_to 'Password', edit_user_settings_path
+      .nav.navbar-nav.pull-right
+        = render 'devise/menu/items'

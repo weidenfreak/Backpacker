@@ -13,7 +13,7 @@ gem 'dynamic_form', '~> 1.1.4'
 gem 'protected_attributes'
 gem 'pg'
 
-gem 'bootstrap-sass', '~> 2.2.2.0'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'sass-rails', '~> 4.0.1'
 gem 'coffee-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.0.3'

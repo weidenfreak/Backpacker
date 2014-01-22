@@ -8,11 +8,18 @@
       %a.navbar-brand{:href => root_url} Backpacker
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li= link_to 'Home', root_url
-        %li= link_to 'Imprint', imprint_url
+        %li= link_to 'Map', root_url
         %li= link_to 'About', about_url
-        - if user_signed_in?
-          %li= link_to 'Profile', edit_user_registration_path
-          %li= link_to 'Password', edit_user_settings_path
+        %li= link_to 'Imprint', imprint_url
       .nav.navbar-nav.pull-right
+        - if user_signed_in?
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              Settings
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{href: edit_user_registration_path} Edit Profile
+              %li
+                %a{href: edit_user_settings_path} Change Password
         = render 'devise/menu/items'

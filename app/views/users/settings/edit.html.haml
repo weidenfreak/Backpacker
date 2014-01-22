@@ -1,12 +1,10 @@
-%h2 Change your password
-= form_for(@user, :url => user_settings_path, :html => { :method => :put, :class => 'well' }) do |f|
-  = f.error_messages
-  = f.label :current_password
-  = f.password_field :current_password
-  = f.label :password
-  = f.password_field :password, :autocomplete => "off"
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-  %div= f.submit "Update", :class => 'btn'
+%h2 Change password
+= semantic_form_for(@user, :url => user_settings_path, :html => { :method => :put }) do |f|
+  = f.semantic_errors
+  = f.input :current_password, as: :password, required: true
+  = f.input :password, as: :password, label: "New password", required: true
+  = f.input :password_confirmation, as: :password, label: "Confirm new password", required: true
+  = f.action :submit, label: "Change my password", button_html: { class: 'btn btn-default' }
 
-= link_to "Back", :back
+.navi-links
+  = link_to "Back", :back

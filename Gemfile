@@ -10,11 +10,13 @@ gem "devise", '~> 3.2.2'
 gem "gmaps4rails", '~> 2.1.1'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'dynamic_form', '~> 1.1.4'
+gem 'formtastic', '~> 2.2.1'
 gem 'protected_attributes'
 gem 'pg'
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'sass-rails', '~> 4.0.1'
+gem 'formtastic-bootstrap', '~> 3.0.0.rc.2'
 gem 'coffee-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.0.3'
 

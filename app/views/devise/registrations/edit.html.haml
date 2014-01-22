@@ -1,16 +1,11 @@
-%h2 Edit #{resource_name.to_s.humanize}
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'well' }) do |f|
+%h2 Edit Profile
+= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
-  = f.label :email
-  = f.email_field :email
-  = f.label :tagline
-  = f.text_field :tagline
-  %span.help-inline (this text is shown for your pin on the map)
-  = f.label :status
-  = f.select :status, options_for_select(User::STATUS, :selected => @user.status)
-  = f.label :description
-  = f.text_area :description, :rows => 4
-  %div= f.submit "Update", :class => 'btn'
+  = f.input :email, as: :email
+  = f.input :tagline, hint: "(this text is shown for your pin on the map)"
+  = f.input :status, :collection => options_for_select(User::STATUS, :selected => @user.status)
+  = f.input :description, as: :text, input_html: { rows: 4 }
+  = f.action :submit, label: "Save", button_html: { :class => "btn btn-default"}
 
 
 = link_to "Update my location", "", :id => 'update-location', :class => "btn"

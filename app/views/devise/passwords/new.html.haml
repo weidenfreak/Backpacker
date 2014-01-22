@@ -1,7 +1,6 @@
 %h2 Forgot your password?
-= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => 'well' }) do |f|
+= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
   = devise_error_messages!
-  = f.label :email
-  = f.email_field :email
-  %div= f.submit "Send me reset password instructions", :class => 'btn'
+  = f.input :email, as: :email
+  = f.action :submit, label: "Send me reset password instructions", button_html: { :class => "btn btn-default"}
 = render "devise/shared/links"

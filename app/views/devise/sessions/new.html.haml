@@ -1,12 +1,7 @@
-%h2 Sign in
-= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'well' }) do |f|
-  = f.label :email
-  = f.email_field :email, :autofocus => "autofocus"
-  = f.label :password
-  = f.password_field :password
-  - if devise_mapping.rememberable?
-    = f.label :remember_me do
-      = f.check_box :remember_me
-      Remember Me!
-  %div= f.submit "Sign in", :class => 'btn'
+%h2 Login
+= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { }) do |f|
+  = devise_error_messages!
+  = f.input :email, as: :email, :input_html => { :autofocus => "autofocus" }
+  = f.input :password, as: :password
+  = f.action :submit, label: "Login", button_html: { :class => "btn btn-default"}
 = render "devise/shared/links"

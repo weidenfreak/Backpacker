@@ -14,13 +14,9 @@
   %body
     #wrap
       = render 'layouts/navigation'
-      .container.text-center
-        .page-header
-          %h1 Find a travel mate
-        %p.lead
-          Searching for people to travel with? See who's around you and wants to travel as well!
+      .container
+        = render 'layouts/messages'
         %p
-          = render 'layouts/messages'
           = yield
     #footer
       .container.text-center

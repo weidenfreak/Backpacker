@@ -1,8 +1,10 @@
 %h2 Edit Profile
 = semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
+  = f.semantic_errors
   = f.input :email, as: :email
   = f.input :tagline, hint: "(this text is shown for your pin on the map)"
+  = f.input :address, hint: "(needs to be in New Zealand, e.g. Auckland)"
   = f.input :status, :collection => options_for_select(User::STATUS, :selected => @user.status)
   = f.input :description, as: :text, input_html: { rows: 4 }
   = f.action :submit, label: "Save", button_html: { :class => "btn btn-default"}

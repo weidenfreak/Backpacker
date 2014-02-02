@@ -13,6 +13,7 @@ gem 'dynamic_form', '~> 1.1.4'
 gem 'formtastic', '~> 2.2.1'
 gem 'protected_attributes'
 gem 'pg'
+gem 'geocoder'
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'sass-rails', '~> 4.0.1'

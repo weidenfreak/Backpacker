@@ -65,6 +65,7 @@ GEM
       actionpack (>= 3.0)
     formtastic-bootstrap (3.0.0.rc.2)
       formtastic (>= 2.2)
+    geocoder (1.1.2)
     gmaps4rails (2.1.1)
     haml (3.1.7)
     hike (1.2.3)
@@ -161,6 +162,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   formtastic (~> 2.2.1)
   formtastic-bootstrap (~> 3.0.0.rc.2)
+  geocoder
   gmaps4rails (~> 2.1.1)
   haml (~> 3.1.6)
   jquery-rails (~> 3.0.4)

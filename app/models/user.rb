@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   before_validation :geocode, :reverse_geocode
 
   validates :email, presence: :true
+  validates :tagline, length: { maximum: 50, minimum: 2 }
   validate :location_needs_to_be_in_nz
 
   def location_needs_to_be_in_nz

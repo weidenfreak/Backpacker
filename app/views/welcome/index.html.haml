@@ -1,5 +1,6 @@
 = javascript_include_tag  "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry"
 = javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+= javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"
 
 .container.text-center
   .page-header
@@ -10,7 +11,45 @@
     #map
   - content_for :scripts do
     :javascript
-      handler = Gmaps.build('Google');
+
+      var InfoBoxBuilder,
+        __hasProp = {}.hasOwnProperty,
+        __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+      InfoBoxBuilder = (function(_super) {
+
+        __extends(InfoBoxBuilder, _super);
+
+        function InfoBoxBuilder() {
+          return InfoBoxBuilder.__super__.constructor.apply(this, arguments);
+        }
+
+        InfoBoxBuilder.prototype.create_infowindow = function() {
+          var boxText;
+          if (!_.isString(this.args.infowindow)) {
+            return null;
+          }
+          boxText = document.createElement("div");
+          boxText.setAttribute("class", 'custom-info-box');
+          boxText.innerHTML = this.args.infowindow;
+          return this.infowindow = new InfoBox(this.infobox(boxText));
+        };
+
+        InfoBoxBuilder.prototype.infobox = function(boxText) {
+          return {
+            content: boxText,
+            pixelOffset: new google.maps.Size(5, 5),
+            boxStyle: {
+              width: "200px"
+            }
+          };
+        };
+
+        return InfoBoxBuilder;
+
+      })(Gmaps.Google.Builders.Marker);
+      handler = Gmaps.build('Google', { builders: { Marker: InfoBoxBuilder} });
+
       handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         markers = handler.addMarkers(#{raw @json });
         handler.bounds.extendWith(markers);

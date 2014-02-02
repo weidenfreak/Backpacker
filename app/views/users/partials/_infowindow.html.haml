@@ -4,6 +4,6 @@
   .span2
     %strong
       = link_to user.name, user_registration_path(:id => user.id)
+      %p= user.tagline
     .lead.small
-      = user.tagline
       = user.description

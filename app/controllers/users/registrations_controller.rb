@@ -6,9 +6,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     if @user.update_without_password(params[:user])
       set_flash_message :notice, :updated
+      redirect_to root_url
+    else
+      render "devise/registrations/edit"
     end
 
-    redirect_to edit_user_registration_path
   end
 
 end
